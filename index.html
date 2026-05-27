@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delane Cardoso Gastronomia — Catering, Bolos, Doces e Salgados</title>
+  <meta name="description"
+    content="Transformamos seu evento em uma memória inesquecível. Catering, bolos, doces e salgados de alto padrão no Ceará." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="stayle.css">
+  <link rel="shortcut icon" href="img/delane-logo.png" type="logodelane">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+</head>
+
+<body id="top">
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="#top" class="nav-logo">
+      <img src="img\delane-logo.png" alt="Delane Cardoso" style="border-radius: 15%;" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#cardapio">Cardápio</a></li>
+      <li><a href="#eventos">Eventos</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="#contato" class="nav-cta">Orçamento</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#sobre" onclick="closeMenu()">Sobre</a>
+    <a href="#cardapio" onclick="closeMenu()">Cardápio</a>
+    <a href="#eventos" onclick="closeMenu()">Eventos</a>
+    <a href="#depoimentos" onclick="closeMenu()">Depoimentos</a>
+    <a href="#contato" onclick="closeMenu()">Contato</a>
+    <a href="#contato" onclick="closeMenu()" class="m-cta">Solicitar Orçamento</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+
+      <h1 class="hero-title">
+        <span>Delane</span>
+        <span style=" color: var(--gold)">Cardoso</span>
+      </h1>
+
+      <p class="hero-sub">Transformamos seu evento em uma memória inesquecível. <br> Catering • Bolos • Doces</p>
+
+      <div class="hero-actions">
+        <a href="#contato" class="btn-primary">Ver Orçamento</a>
+        <a href="#cardapio" class="btn-outline">Ver Cardápio</a>
+      </div>
+
+    </div>
+    <div class="hero-scroll">O sabor da celebração perfeita</div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="sobre-inner">
+      <div class="sobre-left reveal">
+        <p class="section-tag">Sobre nós</p>
+        <h2 class="section-title">Cada detalhe<br>é <em>sabor.</em></h2>
+        <div class="divider divider-left" style="background: var(--gold); margin-bottom: 28px;"></div>
+        <p class="sobre-text">Acreditamos que os momentos mais importantes da vida merecem ser celebrados com beleza,
+          sabor e emoção. Da emoção de um jantar a beleza de uma grande festa, criamos experiências
+          gastronômicas que ficam eternizadas.</p>
+
+        <div class="sobre-stats">
+          <div class="stat reveal reveal-delay-1">
+            <div class="stat-num">+12</div>
+            <div class="stat-label">Anos de experiência</div>
+          </div>
+
+          <div class="stat reveal reveal-delay-2">
+            <div class="stat-num">+1.000</div>
+            <div class="stat-label">Eventos realizados</div>
+          </div>
+
+          <div class="stat reveal reveal-delay-3">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Feito com amor</div>
+          </div>
+
+        </div>
+      </div>
+      <div class="sobre-right reveal reveal-delay-2">
+        <div class="sobre-img-wrap">
+          <img src="img/mesafixa2.jpeg" alt="" />
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARDÁPIO -->
+  <section id="cardapio">
+    <div class="cardapio-inner">
+      <p class="section-tag reveal">Nosso Cardápio</p>
+      <h2 class="section-title reveal">Sabores que <em>encantam</em></h2>
+      <div class="divider reveal"></div>
+      <div class="food-grid">
+        <div class="food-card reveal reveal-delay-1">
+          <img src="img/saladascoco.jpeg" alt="Bolos Artesanais" class="food-img" />
+          <div class="food-info">
+            <div class="food-line"></div>
+            <div class="food-name">Frutas no Coco</div>
+            <div class="food-desc">Saladas de furta no coco</div>
+          </div>
+        </div>
+        <div class="food-card reveal reveal-delay-2">
+          <img src="img/mineburger.jpeg" alt="mineburger" class="food-img" />
+          <div class="food-info">
+            <div class="food-line"></div>
+            <div class="food-name">Mine burger</div>
+            <div class="food-desc">Mine pão brioche, quiejo, carne e alface.</div>
+          </div>
+        </div>
+        <div class="food-card reveal reveal-delay-3">
+          <img src="img/casamento1.jpeg" alt="Salgados Gourmet" class="food-img" />
+          <div class="food-info">
+            <div class="food-line"></div>
+            <div class="food-name">Salgados Gourmet</div>
+            <div class="food-desc">Mini porções, canapés e finger food.</div>
+          </div>
+        </div>
+        <div class="food-card reveal reveal-delay-4">
+          <img src="img/aniversario1.jpeg" alt="Pratos Quentes" class="food-img" />
+          <div class="food-info">
+            <div class="food-line"></div>
+            <div class="food-name">Pratos Quentes</div>
+            <div class="food-desc">Menu personalizado de alta gastronomia.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTOS -->
+  <section id="eventos">
+    <div class="eventos-inner">
+      <p class="section-tag reveal">Momentos</p>
+      <h2 class="section-title reveal">Eventos <em>inesquecíveis</em></h2>
+      <div class="divider reveal"></div>
+      <div class="events-grid">
+        <div class="event-card reveal reveal-delay-1">
+          <img src="img\casamento1.jpeg" alt="Casamentos" />
+          <div class="event-overlay">
+            <div class="event-name">Casamentos</div>
+            <div class="event-desc">Do civil ao grande dia.</div>
+          </div>
+        </div>
+        <div class="event-card reveal reveal-delay-2">
+          <img src="img/aniversario1.jpeg" alt="Aniversários" />
+          <div class="event-overlay">
+            <div class="event-name">Aniversários</div>
+            <div class="event-desc">Cada idade merece um brinde.</div>
+          </div>
+        </div>
+        <div class="event-card reveal reveal-delay-3">
+          <img src="img/corporativo1.jpeg" alt="Corporativos" />
+          <div class="event-overlay">
+            <div class="event-name">Corporativos</div>
+            <div class="event-desc">Sofisticação em cada detalhe.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos">
+    <div class="dep-inner">
+      <p class="section-tag reveal">Depoimentos</p>
+      <h2 class="section-title reveal">Quem viveu, <em>conta</em></h2>
+      <div class="divider reveal"></div>
+
+      <div class="dep-carousel-wrapper">
+        <div class="dep-carousel" id="depCarousel">
+
+
+          <div class="dep-card">
+            <div class="dep-stars">★★★★★</div>
+            <span class="dep-quote">"</span>
+            <img src="img/feedback1.jpeg" alt="Foto Mariana Sousa" class="dep-img">
+
+            <div class="dep-author">
+              <div class="dep-avatar">AL</div>
+              <div>
+                <div class="dep-name">Adriana LOT</div>
+                <div class="dep-role">Aniversário · Fortaleza</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dep-card">
+            <div class="dep-stars">★★★★★</div>
+            <span class="dep-quote">"</span>
+            <img src="img/feedback2.jpeg" alt="Foto Mariana Sousa" class="dep-img">
+
+            <div class="dep-author">
+              <div class="dep-avatar">MY</div>
+              <div>
+                <div class="dep-name">Mary</div>
+                <div class="dep-role">Aniversário · Fortaleza</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="dep-card">
+            <div class="dep-stars">★★★★★</div>
+            <span class="dep-quote">"</span>
+            <img src="img/feedback3.png" alt="Foto Mariana Sousa" class="dep-img">
+
+            <div class="dep-author">
+              <div class="dep-avatar">CN</div>
+              <div>
+                <div class="dep-name">Ceciliana</div>
+                <div class="dep-role">Almoço dia das mães · Fortaleza</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Adicione mais .dep-card aqui -->
+
+        </div>
+      </div>
+      <div class="dep-nav" style="margin-bottom: 10%;">
+            <button class="dep-arrow" id="depPrev" aria-label="Anterior">&#8592;</button>
+            <div class="dep-dots" id="depDots"></div>
+            <button class="dep-arrow" id="depNext" aria-label="Próximo">&#8594;</button>
+          </div>
+          
+    </div>
+    
+
+
+
+    <!-- CONTATO -->
+    <section id="contato">
+      <div class="contato-inner">
+        <img src="img/delane-logo.png" alt="Logo" class="contato-logo reveal" style="border-radius: 50%;" />
+        <p class="section-tag reveal">Contato</p>
+        <h2 class="section-title reveal">Vamos criar <em>juntos?</em></h2>
+        <div class="divider reveal"></div>
+        <p class="contato-text reveal">Conte-nos sobre seu evento. Responderemos em poucos minutos com um orçamento
+          personalizado.</p>
+
+        <div class="contato-actions reveal">
+
+          <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5585987731298&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnjGe3DMG97hJFs35oBtLnsM0iJobOrWpikHTiCTw8-uzxfPaXvw_eF7HhhA4_aem_rhLLqu-gS-0YbIl-Eg5oxQ"
+            class="btn-whatsapp">
+            <img src="img/logoWhats.png" alt="" viewBox="0 0 24 24" width="18" height="18" fill="white">
+            Falar no WhatsApp
+
+          </a>
+
+        </div>
+        <div class="contato-divider"></div>
+        <div class="social-links reveal">
+          <a href="https://www.instagram.com/delanecardoso_/" class="social-link" aria-label="Instagram">
+            <img src="img/instagramlogo.png" alt="" viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="img/delane-logo.png" alt="Logo" style="border-radius: 20%;" />
+          <span class="footer-brand-name">Delane Cardoso Gastronomia</span>
+        </div>
+        <p class="footer-copy">© 2026 Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
