@@ -1,33 +1,33 @@
 // Navbar scroll
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
 });
 
 // Mobile menu
 function toggleMenu() {
-    const h = document.getElementById('hamburger');
-    const m = document.getElementById('mobileMenu');
-    h.classList.toggle('open');
-    m.classList.toggle('open');
-    document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
+  const h = document.getElementById('hamburger');
+  const m = document.getElementById('mobileMenu');
+  h.classList.toggle('open');
+  m.classList.toggle('open');
+  document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
 }
 function closeMenu() {
-    document.getElementById('hamburger').classList.remove('open');
-    const m = document.getElementById('mobileMenu');
-    m.classList.remove('open');
-    document.body.style.overflow = '';
+  document.getElementById('hamburger').classList.remove('open');
+  const m = document.getElementById('mobileMenu');
+  m.classList.remove('open');
+  document.body.style.overflow = '';
 }
 
 // Scroll reveal
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-        if (e.isIntersecting) {
-            e.target.classList.add('visible');
-            observer.unobserve(e.target);
-        }
-    });
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
 }, { threshold: 0.12 });
 reveals.forEach(r => observer.observe(r));
 
@@ -142,3 +142,27 @@ reveals.forEach(r => observer.observe(r));
   wrapper.addEventListener('mouseleave', onEnd);
   wrapper.addEventListener('touchend', onEnd);
 })();
+
+
+const music = document.getElementById('bgMusic');
+const btn = document.getElementById('musicBtn');
+
+// Navegadores bloqueiam autoplay — inicia no primeiro clique/toque do usuário
+function startOnInteraction() {
+  music.volume = 0.3; // volume baixo (0 a 1) — ajuste aqui
+  music.play().catch(() => { });
+  document.removeEventListener('click', startOnInteraction);
+  document.removeEventListener('touchstart', startOnInteraction);
+}
+document.addEventListener('click', startOnInteraction);
+document.addEventListener('touchstart', startOnInteraction);
+
+function toggleMusic() {
+  if (music.paused) {
+    music.play();
+    btn.textContent = '🎵';
+  } else {
+    music.pause();
+    btn.textContent = '🔇';
+  }
+}

@@ -19,6 +19,10 @@
 
 <body id="top">
 
+  <audio id="bgMusic" loop preload="none" autoplay>
+    <source src="audio/the_mountain-piano-522474.mp3" type="audio/mpeg">
+  </audio>
+
   <!-- NAVBAR -->
   <nav id="navbar">
     <a href="#top" class="nav-logo">
@@ -31,6 +35,9 @@
       <li><a href="#depoimentos">Depoimentos</a></li>
       <li><a href="#contato">Contato</a></li>
       <li><a href="#contato" class="nav-cta">Orçamento</a></li>
+      <li><button id="musicBtn" onclick="toggleMusic()" title="Música">
+
+</button></li>
     </ul>
     <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -44,7 +51,8 @@
     <a href="#eventos" onclick="closeMenu()">Eventos</a>
     <a href="#depoimentos" onclick="closeMenu()">Depoimentos</a>
     <a href="#contato" onclick="closeMenu()">Contato</a>
-    <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5585987731298&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnjGe3DMG97hJFs35oBtLnsM0iJobOrWpikHTiCTw8-uzxfPaXvw_eF7HhhA4_aem_rhLLqu-gS-0YbIl-Eg5oxQ" onclick="closeMenu()" class="m-cta">Solicitar Orçamento</a>
+    <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5585987731298&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnjGe3DMG97hJFs35oBtLnsM0iJobOrWpikHTiCTw8-uzxfPaXvw_eF7HhhA4_aem_rhLLqu-gS-0YbIl-Eg5oxQ"
+      onclick="closeMenu()" class="m-cta">Solicitar Orçamento</a>
   </div>
 
   <!-- HERO -->
@@ -247,7 +255,7 @@
 
     </div>
 
-    
+
   </section>
 
 
