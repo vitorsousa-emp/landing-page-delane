@@ -147,20 +147,22 @@ reveals.forEach(r => observer.observe(r));
 const music = document.getElementById('bgMusic');
 const btn = document.getElementById('musicBtn');
 
-// Navegadores bloqueiam autoplay — inicia no primeiro clique/toque do usuário
-function startOnInteraction() {
-  music.volume = 0.3; // volume baixo (0 a 1) — ajuste aqui
+music.volume = 0.3;
+
+function startMusic() {
+  if (!music.paused) return;
   music.play().catch(() => { });
-  document.removeEventListener('click', startOnInteraction);
-  document.removeEventListener('touchstart', startOnInteraction);
 }
-document.addEventListener('click', startOnInteraction);
-document.addEventListener('touchstart', startOnInteraction);
+
+// captura qualquer tipo de interação
+['touchend', 'touchmove', 'touchstart', 'mousedown', 'scroll', 'click'].forEach(evt => {
+  document.addEventListener(evt, startMusic, { once: true, passive: true });
+});
 
 function toggleMusic() {
   if (music.paused) {
     music.play();
-    btn.textContent = '🎵';
+    btn.textContent = '♪';
   } else {
     music.pause();
     btn.textContent = '🔇';
