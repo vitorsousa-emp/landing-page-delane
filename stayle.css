@@ -1128,6 +1128,7 @@ footer {
   font-size: 18px;
   cursor: pointer;
   color: #C9A84C;
+  -webkit-transform: translateZ(0);
   backdrop-filter: blur(8px);
   transition: background 0.2s;
 }

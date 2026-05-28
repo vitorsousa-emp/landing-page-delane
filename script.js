@@ -168,3 +168,8 @@ function toggleMusic() {
     btn.textContent = '🔇';
   }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('musicBtn');
+  document.body.appendChild(btn); // move pro final do body
+});
